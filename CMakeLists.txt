@@ -9,4 +9,7 @@ add_library(Pluma STATIC ${SOURCES})
 target_link_libraries(Pluma ${CONAN_LIBS})
 
 install(FILES ${HEADERS} DESTINATION include/Pluma)
-install(TARGETS Pluma LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
+install(TARGETS Pluma
+        ARCHIVE DESTINATION ${PROJECT_NAME}/lib
+        LIBRARY DESTINATION ${PROJECT_NAME}/lib
+        RUNTIME DESTINATION ${PROJECT_NAME}/bin)
